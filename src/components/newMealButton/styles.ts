@@ -11,7 +11,7 @@ export const Container = styled.TouchableOpacity`
   flex-direction: row;
   padding: 8px;
   gap: 14px;
-
+  margin-bottom: 32px;
 `;
 
 export const TextNewMeal = styled.Text`

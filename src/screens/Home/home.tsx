@@ -4,6 +4,7 @@ import { Percent } from "@components/percent";
 import { NewMealButton } from "@components/newMealButton";
 import { MealText } from "@components/mealText";
 import { MealCard } from "@components/mealCard";
+import { DayListDate } from "@components/date";
 
 
 export function Home() {
@@ -15,11 +16,12 @@ export function Home() {
       <NewMealButton/>
       
       {/*test 👇*/}
+      <DayListDate/>
       <MealCard/>
       <MealCard/>
       <MealCard/>
       <MealCard/>
-    
+  
     </Container>
   );
 }
