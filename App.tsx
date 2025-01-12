@@ -2,7 +2,9 @@ import { ThemeProvider } from "styled-components/native";
 import { useFonts, NunitoSans_400Regular, NunitoSans_700Bold  } from "@expo-google-fonts/nunito-sans";
 import theme from "@theme/index";
 
-import { Home } from "@screens/Home/home";
+import { Home } from "@screens/Home";
+import { Statistics } from "@screens/Statistics";
+
 import { Loading } from "@components/loading";
 
 export default function App() {
@@ -12,7 +14,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      { fontsLoaded ? <Home /> : <Loading /> }
+      { fontsLoaded ? <Statistics /> : <Loading /> }
     </ThemeProvider>
     
   );
