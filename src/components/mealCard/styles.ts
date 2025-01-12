@@ -30,5 +30,6 @@ export const MealCardText = styled.Text`
   color: ${({ theme }: any) => theme.COLORS.GRAY_1};
   font-size: ${({ theme }: any) => theme.FONT_SIZE.M};
   font-family: ${({ theme }: any) => theme.FONT_FAMILY.REGULAR};
+  flex: 1;
 `;
 
