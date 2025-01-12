@@ -13,6 +13,7 @@ export const Container = styled.View`
   background-color: ${({ theme }: any) => theme.COLORS.GREEN_LIGHT};
   height: 102px;
   margin-top: 32px;
+  margin-bottom: 40px;
   border-radius: 8px;
   justify-content: center;
   align-items: center;
