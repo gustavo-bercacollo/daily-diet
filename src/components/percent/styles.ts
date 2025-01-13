@@ -1,12 +1,4 @@
 import styled from "styled-components/native";
-import { TouchableOpacity } from 'react-native';
-import { MaterialIcons } from '@expo/vector-icons'
-
-export type ButtonIconTypeStyleProps = "PRIMARY" | "SECONDARY";
-
-type Props = {
-  type: ButtonIconTypeStyleProps;
-}
 
 export const Container = styled.View`
   width: 100%;
@@ -37,17 +29,3 @@ export const PercentText = styled.Text`
   text-align: center;
 `;
 
-export const ContainerTouchableOpacity = styled(TouchableOpacity)`
-  position: absolute; 
-  top: 5px; 
-  right: 5px; 
-  width: 40px; 
-  height: 40px; 
-  justify-content: center;
-  align-items: center;
-`;
-
-export const Icon = styled(MaterialIcons).attrs<Props>(({ theme, type }: any) => ({
-  size: 25,
-  color: type === 'PRIMARY' ? theme.COLORS.GREEN_DARK : theme.COLORS.RED_DARK
-}))``;

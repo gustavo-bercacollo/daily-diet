@@ -5,6 +5,7 @@ import { NewMealButton } from "@components/newMealButton";
 import { MealText } from "@components/mealText";
 import { MealCard } from "@components/mealCard";
 import { DayListDate } from "@components/date";
+import { ArrowIcon } from "@components/arrowIcon";
 
 
 export function Home() {
@@ -12,7 +13,14 @@ export function Home() {
     <Container>
       <Header />
       <Percent/>
-      <MealText/>
+      <ArrowIcon 
+      icon={"arrow-outward"} 
+      type="PRIMARY"
+      screen="HOME"
+      />
+      <MealText>
+        
+      </MealText>
       <NewMealButton/>
       
       {/*test 👇*/}
