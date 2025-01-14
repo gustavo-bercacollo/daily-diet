@@ -1,12 +1,14 @@
-import { Sequence } from "@components/sequence";
+import { InfoMealStatistics } from "@components/infoMealStatistics";
 import { Container } from "./styles";
-import { Total } from "@components/total";
+import { MealCompare } from "@components/mealCompare/index";
 
 export function DataContent() {
   return (
     <Container>
-      <Sequence/>
-      <Total/>
+      <InfoMealStatistics/>
+      <InfoMealStatistics/>
+      <MealCompare/>
+      
     </Container>
   );
 }

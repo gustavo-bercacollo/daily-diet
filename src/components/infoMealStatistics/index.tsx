@@ -1,6 +1,6 @@
 import { Container } from "./styles";
 
-export function Total() {
+export function InfoMealStatistics() {
   return (
     <Container/>
   );
