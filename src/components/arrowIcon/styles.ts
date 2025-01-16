@@ -2,8 +2,8 @@ import styled from "styled-components/native";
 import { TouchableOpacity } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 
-export type ButtonIconTypeStyleProps = "PRIMARY" | "SECONDARY";
-export type IconPositionScreenProps = "HOME" | "STATISTICS";
+export type ButtonIconTypeStyleProps = "PRIMARY" | "SECONDARY" | "TERTIARY";
+export type IconPositionScreenProps = "HOME" | "STATISTICS" | "REGISTER";
 
 type Props = {
   type: ButtonIconTypeStyleProps;
@@ -19,6 +19,10 @@ const getPositionStyles = (screen: IconPositionScreenProps) => {
     `,
     STATISTICS: `
       top: 35px;
+      right: 340px;
+    `,
+    REGISTER: `
+      top: 50px;
       right: 340px;
     `  
   };
@@ -37,5 +41,10 @@ export const ContainerTouchableOpacity = styled(TouchableOpacity)<Props>`
 
 export const Icon = styled(MaterialIcons).attrs<Props>(({ theme, type }: any) => ({
   size: 25,
-  color: type === "PRIMARY" ? theme.COLORS.GREEN_DARK : theme.COLORS.RED_DARK,
+  color: 
+    type === "PRIMARY"
+      ? theme.COLORS.GREEN_DARK
+      : type === "SECONDARY"
+      ? theme.COLORS.RED_DARK
+      : theme.COLORS.GRAY_2,
 }))``;
