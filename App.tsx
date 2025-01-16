@@ -4,6 +4,7 @@ import theme from "@theme/index";
 
 import { Home } from "@screens/Home";
 import { Statistics } from "@screens/Statistics";
+import { Register } from "@screens/Register";
 
 import { Loading } from "@components/loading";
 
@@ -14,7 +15,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      { fontsLoaded ? <Statistics /> : <Loading /> }
+      { fontsLoaded ? <Register /> : <Loading /> }
     </ThemeProvider>
   );
 }
