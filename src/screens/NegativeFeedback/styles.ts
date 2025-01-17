@@ -6,14 +6,13 @@ export const Container = styled.View`
 
   align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: 32px;
+  padding: 32px; 
 `;
 
   export const Title = styled.Text`
   font-family: ${({ theme }: any) => theme.FONT_FAMILY.BOLD};
   font-size: ${({ theme }: any) => theme.FONT_SIZE.L}px;
-  color: ${({ theme }: any) => theme.COLORS.GREEN_DARK};;
+  color: ${({ theme }: any) => theme.COLORS.RED_DARK};;
 
   margin-bottom: 8px;  
 `;
@@ -22,7 +21,7 @@ export const SubTitle = styled.Text`
 font-family: ${({ theme }: any) => theme.FONT_FAMILY.REGULAR};
 font-size: ${({ theme }: any) => theme.FONT_SIZE.S}px;
 color: ${({ theme }: any) => theme.COLORS.GRAY_1};
-
+text-align: center;
 margin-bottom: 40px;  
 `;
 

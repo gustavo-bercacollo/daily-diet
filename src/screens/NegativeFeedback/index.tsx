@@ -1,16 +1,16 @@
 import { Container, Title, SubTitle, Illustration, ButtonText, Button, BoldText} from "./styles";
-import IllustrationFeedbackPositive from "@assets/IllustrationFeedBackPositive.png";
+import IllustrationFeedbackNegative from "@assets/IllustrationFeedbackNegative.png";
 
-export function PositiveFeedBack() {
+export function NegativeFeedBack() {
   return (
     <Container>
       <Title>
-       Continue assim!
+       Que pena!
       </Title>
       <SubTitle>
-       Você continua <BoldText>dentro da dieta</BoldText>. Muito bem!
+       Você <BoldText>saiu da dieta</BoldText> dessa vez, mas continue se esforçando e não desista!
       </SubTitle>
-      <Illustration source={IllustrationFeedbackPositive}/>
+      <Illustration source={IllustrationFeedbackNegative}/>
       <Button>
        <ButtonText>
         Ir para a página inicial
