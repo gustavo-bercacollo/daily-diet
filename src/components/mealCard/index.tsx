@@ -7,7 +7,10 @@ export function MealCard (){
       <Hour>20:00</Hour>
       <Divider>|</Divider>
       <MealCardText>X-tudo</MealCardText>
-      <DotIndicator/>
+      <DotIndicator
+      color="RED_MIND"
+      size="BIG"
+      />
     </Container>
   );
 }

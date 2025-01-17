@@ -1,7 +1,16 @@
-import { DotIcon } from "./styles";
+import { DotIcon, DotSizeProps, DotColorProps } from "./styles";
 
-export function DotIndicator() {
+type Props =  {
+  size: DotSizeProps;  
+  color: DotColorProps
+};
+
+export function DotIndicator({ size, color }: Props) {
   return(
-    <DotIcon name="dot-fill"/>
+    <DotIcon 
+    name="dot-fill"
+    size={size}
+    color={color}
+    />
   );
 }
