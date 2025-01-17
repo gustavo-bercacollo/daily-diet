@@ -5,6 +5,7 @@ import theme from "@theme/index";
 import { Home } from "@screens/Home";
 import { Statistics } from "@screens/Statistics";
 import { Register } from "@screens/Register";
+import { PositiveFeedBack } from "@screens/PositiveFeedback";
 
 import { Loading } from "@components/loading";
 
@@ -15,7 +16,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      { fontsLoaded ? <Register /> : <Loading /> }
+      { fontsLoaded ? <PositiveFeedBack /> : <Loading /> }
     </ThemeProvider>
   );
 }
