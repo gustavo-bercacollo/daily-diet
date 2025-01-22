@@ -7,6 +7,7 @@ import { Statistics } from "@screens/Statistics";
 import { Register } from "@screens/Register";
 import { PositiveFeedBack } from "@screens/PositiveFeedback";
 import { NegativeFeedBack } from "@screens/NegativeFeedback";
+import { Details } from "@screens/Details";
 
 import { Loading } from "@components/loading";
 
@@ -17,7 +18,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      { fontsLoaded ? <NegativeFeedBack /> : <Loading /> }
+      { fontsLoaded ? <Details /> : <Loading /> }
     </ThemeProvider>
   );
 }
