@@ -8,6 +8,7 @@ import { Register } from "@screens/Register";
 import { PositiveFeedBack } from "@screens/PositiveFeedback";
 import { NegativeFeedBack } from "@screens/NegativeFeedback";
 import { Details } from "@screens/Details";
+import { EditMeal } from "@screens/EditMeal";
 
 import { Loading } from "@components/loading";
 
@@ -18,7 +19,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      { fontsLoaded ? <Details /> : <Loading /> }
+      { fontsLoaded ? <EditMeal /> : <Loading /> }
     </ThemeProvider>
   );
 }

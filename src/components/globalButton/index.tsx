@@ -5,7 +5,7 @@ type Props = {
   backgroundColor: ColorProps;
   fontColor: ColorProps;
   icon?: keyof typeof Icon.glyphMap;
-  iconColor: ColorProps;
+  iconColor?: ColorProps;
   borderLine?: BorderProps;
 };
 
