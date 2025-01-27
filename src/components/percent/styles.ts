@@ -13,7 +13,7 @@ export const Container = styled.View`
 `;
 
 export const PercentNumber = styled.Text`
-  font-size: ${({ theme }: any) => theme.FONT_SIZE.XL};
+  font-size: ${({ theme }: any) => theme.FONT_SIZE.XL}px;
   font-family: ${({ theme }: any) => theme.FONT_FAMILY.BOLD};
   color: ${({ theme }: any) => theme.COLORS.GRAY_1};
 

@@ -1,3 +1,5 @@
+import { useNavigation} from "@react-navigation/native"
+
 import { Container } from "./styles";
 import { Header } from "@components/header";
 import { Percent } from "@components/percent";
@@ -9,6 +11,13 @@ import { ArrowIcon } from "@components/arrowIcon";
 
 
 export function Home() {
+
+ const navigation = useNavigation();
+
+ function handleStatistics() {
+  navigation.navigate("Statistics");
+ }
+
   return (
     <Container>
       <Header />
@@ -17,6 +26,7 @@ export function Home() {
       icon={"arrow-outward"} 
       type="PRIMARY"
       screen="HOME"
+      onPress={handleStatistics}
       />
       <MealText>
         

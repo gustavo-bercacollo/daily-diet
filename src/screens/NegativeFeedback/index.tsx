@@ -1,7 +1,16 @@
+import { useNavigation } from "@react-navigation/native";
+
 import { Container, Title, SubTitle, Illustration, ButtonText, Button, BoldText} from "./styles";
 import IllustrationFeedbackNegative from "@assets/IllustrationFeedbackNegative.png";
 
 export function NegativeFeedBack() {
+
+  const navigation = useNavigation();
+
+  function handleHome() {
+    navigation.navigate("Home");
+  }
+  
   return (
     <Container>
       <Title>
@@ -12,7 +21,7 @@ export function NegativeFeedBack() {
       </SubTitle>
       <Illustration source={IllustrationFeedbackNegative}/>
       <Button>
-       <ButtonText>
+       <ButtonText onPress={handleHome}>
         Ir para a página inicial
        </ButtonText>
       </Button>

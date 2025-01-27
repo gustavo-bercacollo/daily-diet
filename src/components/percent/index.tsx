@@ -1,4 +1,3 @@
-import { ArrowIcon } from "@components/arrowIcon";
 import { Container, PercentNumber, PercentText } from "./styles";
 
 export function Percent(){

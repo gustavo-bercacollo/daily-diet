@@ -12,6 +12,8 @@ import { EditMeal } from "@screens/EditMeal";
 
 import { Loading } from "@components/loading";
 
+import { Routes } from "@routes/index";
+
 export default function App() {
 
   const [fontsLoaded] = useFonts({NunitoSans_400Regular, NunitoSans_700Bold})
@@ -19,7 +21,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      { fontsLoaded ? <EditMeal /> : <Loading /> }
+      { fontsLoaded ? <Routes /> : <Loading /> }
     </ThemeProvider>
   );
 }

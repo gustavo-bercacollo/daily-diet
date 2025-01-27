@@ -1,3 +1,5 @@
+
+
 import { ButtonContainer, ButtonContainerText, ColorProps, Icon, BorderProps } from "./styles";
 
 type Props = {
@@ -7,6 +9,7 @@ type Props = {
   icon?: keyof typeof Icon.glyphMap;
   iconColor?: ColorProps;
   borderLine?: BorderProps;
+  onPress?: () => void; 
 };
 
 export function GlobalButton({
@@ -15,10 +18,13 @@ export function GlobalButton({
   fontColor,
   icon,
   iconColor,
-  borderLine
+  borderLine,
+  onPress, 
 }: Props) {
+
+  
   return (
-    <ButtonContainer 
+    <ButtonContainer onPress={onPress}
     backgroundColor={backgroundColor}
     borderLine={borderLine}>
       <Icon name={icon} iconColor={iconColor} />
