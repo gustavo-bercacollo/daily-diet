@@ -1,4 +1,5 @@
-import { GlobalButton } from "@components/globalButton";
+import { useState } from "react";
+
 import { DotIndicator } from "@components/dotIndicator";
 import {
   Container,
@@ -17,8 +18,26 @@ import {
   TimeInput,
   TimeText,
 } from "./styles";
+import { useTheme } from "styled-components";
 
 export function Form({ children }: { children: React.ReactNode }) {
+  const theme = useTheme();
+  
+  const [isYesSelected, setIsYesSelected] = useState(false);
+  const [isNoSelected, setIsNoSelected] = useState(false);
+
+
+  const handleYesPress = () => {
+    setIsYesSelected(!isYesSelected); 
+    setIsNoSelected(false); 
+  };
+
+  const handleNoPress = () => {
+    setIsNoSelected(!isNoSelected); 
+    setIsYesSelected(false); 
+  };
+
+
   return (
     <Container>
       <NameText>Nome</NameText>
@@ -42,12 +61,22 @@ export function Form({ children }: { children: React.ReactNode }) {
       <DietText>Está dentro da dieta?</DietText>
 
       <DietButtonContainer>
-        <DietButton>
+        <DietButton onPress={handleYesPress}
+          style={{
+            backgroundColor: isYesSelected ? theme.COLORS.GREEN_LIGHT : theme.COLORS.GRAY_6, 
+            borderColor: isYesSelected ? theme.COLORS.GREEN_DARK : theme.COLORS.GRAY_6, 
+            borderWidth: 2,
+          }}>
           <DotIndicator color="GREEN_DARK" size="SMALL" />
           <DietButtonText>Sim</DietButtonText>
         </DietButton>
 
-        <DietButton>
+        <DietButton onPress={handleNoPress}
+          style={{
+            backgroundColor: isNoSelected ? theme.COLORS.RED_LIGHT : theme.COLORS.GRAY_6, 
+            borderColor: isNoSelected ? theme.COLORS.RED_DARK : theme.COLORS.GRAY_6,
+            borderWidth: 2,
+          }}>
           <DotIndicator color="RED_DARK" size="SMALL" />
           <DietButtonText>Não</DietButtonText>
         </DietButton>

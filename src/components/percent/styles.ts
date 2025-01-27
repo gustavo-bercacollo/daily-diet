@@ -23,7 +23,7 @@ export const PercentNumber = styled.Text`
 export const PercentText = styled.Text`
   color: ${({ theme }: any) => theme.COLORS.GRAY_1};
   font-family: ${({ theme }: any) => theme.FONT_FAMILY.REGULAR};
-  font-size: ${({ theme }: any) => theme.FONT_SIZE.XS};
+  font-size: ${({ theme }: any) => theme.FONT_SIZE.XS}px;
   margin-top: 2px;
 
   text-align: center;

@@ -16,19 +16,19 @@ export const Container = styled.View`
 
 export const Hour = styled.Text`
   color: ${({ theme }: any) => theme.COLORS.GRAY_1};
-  size: ${({ theme }: any) => theme.FONT_SIZE.M};
+  size: ${({ theme }: any) => theme.FONT_SIZE.M}px;
   font-family: ${({ theme }: any) => theme.FONT_FAMILY.BOLD};
 `;
 
 export const Divider = styled.Text`
   color: ${({ theme }: any) => theme.COLORS.GRAY_4};
-  font-size: ${({ theme }: any) => theme.FONT_SIZE.L};
+  font-size: ${({ theme }: any) => theme.FONT_SIZE.L}px;
   font-family: ${({ theme }: any) => theme.FONT_FAMILY.REGULAR};
 `;
 
 export const MealCardText = styled.Text`
   color: ${({ theme }: any) => theme.COLORS.GRAY_1};
-  font-size: ${({ theme }: any) => theme.FONT_SIZE.M};
+  font-size: ${({ theme }: any) => theme.FONT_SIZE.M}px;
   font-family: ${({ theme }: any) => theme.FONT_FAMILY.REGULAR};
   flex: 1;
 `;

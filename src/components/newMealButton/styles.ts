@@ -16,7 +16,7 @@ export const Container = styled.TouchableOpacity`
 
 export const TextNewMeal = styled.Text`
   color: ${({ theme}: any) => theme.COLORS.WHITE};
-  font-size: ${({ theme}: any) => theme.FONT_SIZE.S};
+  font-size: ${({ theme}: any) => theme.FONT_SIZE.S}px;
   font-family: ${({ theme}: any) => theme.FONT_FAMILY.BOLD};
   text-align: center;
 `;

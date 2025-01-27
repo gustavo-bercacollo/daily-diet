@@ -21,7 +21,7 @@ export const Container = styled.View.attrs<Props>(({ theme, backgroundColor }: a
 
 export const Text = styled.Text`
   font-family: ${({ theme }: any) => theme.FONT_FAMILY.BOLD};
-  font-size: ${({ theme }: any) => theme.FONT_SIZE.M};
+  font-size: ${({ theme }: any) => theme.FONT_SIZE.M}px;
   color: ${({ theme }: any) => theme.COLORS.GRAY_1};
   text-align: center;
 `;

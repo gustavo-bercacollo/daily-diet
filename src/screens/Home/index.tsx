@@ -1,4 +1,5 @@
 import { useNavigation} from "@react-navigation/native"
+import { useState } from "react";
 
 import { Container } from "./styles";
 import { Header } from "@components/header";
@@ -8,9 +9,13 @@ import { MealText } from "@components/mealText";
 import { MealCard } from "@components/mealCard";
 import { DayListDate } from "@components/date";
 import { ArrowIcon } from "@components/arrowIcon";
+import { FlatList } from "react-native";
 
 
 export function Home() {
+
+ const [mealData, setMealData] = useState<String[]>();
+
 
  const navigation = useNavigation();
 
@@ -33,9 +38,11 @@ export function Home() {
       </MealText>
       <NewMealButton/>
       
+      
+      
       {/*test 👇*/}
       <DayListDate/>
-      <MealCard/>
+      
       <MealCard/>
       <MealCard/>
       <MealCard/>
