@@ -40,7 +40,7 @@ export function Home() {
       
       
       
-      {/*test 👇*/}
+      
       <DayListDate/>
       
       <MealCard/>
