@@ -14,8 +14,7 @@ import { FlatList } from "react-native";
 
 export function Home() {
 
- const [mealData, setMealData] = useState<String[]>();
-
+ 
 
  const navigation = useNavigation();
 
@@ -42,10 +41,8 @@ export function Home() {
       
       
       <DayListDate/>
+      <MealCard/>
       
-      <MealCard/>
-      <MealCard/>
-      <MealCard/>
   
     </Container>
   );

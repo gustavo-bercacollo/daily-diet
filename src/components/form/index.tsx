@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useTheme } from "styled-components";
-
 import { DotIndicator } from "@components/dotIndicator";
 import {
   Container,
@@ -20,43 +19,55 @@ import {
   TimeText,
 } from "./styles";
 
-export function Form({ children, onDietSelection,}: { children: React.ReactNode; 
-  onDietSelection: (isYesSelected: boolean) => void; // Callback para enviar o estado ao pai
+export function Form({
+  children,
+  onDietSelection,
+  onChangeName,
+  onChangeDescription,
+  onChangeDate,
+  onChangeHour,
+}: {
+  children: React.ReactNode;
+  onDietSelection: (isYesSelected: boolean) => void;
+  onChangeName: (name: string) => void;
+  onChangeDescription: (description: string) => void;
+  onChangeDate: (date: string) => void;
+  onChangeHour: (hour: string) => void;
 }) {
   const theme = useTheme();
-  
+
   const [isYesSelected, setIsYesSelected] = useState(false);
   const [isNoSelected, setIsNoSelected] = useState(false);
 
   const handleYesPress = () => {
-    setIsYesSelected(!isYesSelected); 
-    setIsNoSelected(false); 
-    onDietSelection(!isYesSelected); // Atualiza o estado no componente pai
+    setIsYesSelected(!isYesSelected);
+    setIsNoSelected(false);
+    onDietSelection(!isYesSelected); 
   };
 
   const handleNoPress = () => {
-    setIsNoSelected(!isNoSelected); 
-    setIsYesSelected(false); 
-    onDietSelection(false); // "Não" sempre envia false
+    setIsNoSelected(!isNoSelected);
+    setIsYesSelected(false);
+    onDietSelection(false); 
   };
 
   return (
     <Container>
       <NameText>Nome</NameText>
-      <NameInput />
+      <NameInput onChangeText={onChangeName} />
 
       <DescriptionText>Descrição</DescriptionText>
-      <DescriptionInput />
+      <DescriptionInput onChangeText={onChangeDescription} />
 
       <DataAndTimeContainer>
         <DataAndTimeTextContainer>
           <DataText>Data</DataText>
-          <DataInput />
+          <DataInput onChangeText={onChangeDate} />
         </DataAndTimeTextContainer>
 
         <DataAndTimeTextContainer>
           <TimeText>Hora</TimeText>
-          <TimeInput />
+          <TimeInput onChangeText={onChangeHour} />
         </DataAndTimeTextContainer>
       </DataAndTimeContainer>
 
@@ -100,4 +111,3 @@ export function Form({ children, onDietSelection,}: { children: React.ReactNode;
     </Container>
   );
 }
-
