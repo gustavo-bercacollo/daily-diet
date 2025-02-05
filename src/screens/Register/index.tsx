@@ -26,7 +26,14 @@ export function Register() {
     }
 
     try {
-      const meal = { name, description, date, hour, isDietPositive };
+      const meal = 
+      { id: Date.now().toString(),
+        name, 
+        description, 
+        date, 
+        hour, 
+        isDietPositive 
+      };
       await registerCreate(meal);
 
       if (isDietPositive) {

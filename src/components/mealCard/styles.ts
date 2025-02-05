@@ -1,12 +1,10 @@
 import styled from "styled-components/native";
-import { Octicons } from '@expo/vector-icons'
 
-export const Container = styled.View`
+export const Container = styled.TouchableOpacity`
   width: 100%;
   height: 49px;
   border: 1px solid ${({ theme }: any) => theme.COLORS.GRAY_5};
   border-radius: 6px;
-  //justify-content: center;
   align-items: center;
   flex-direction: row;
   padding: 12px;

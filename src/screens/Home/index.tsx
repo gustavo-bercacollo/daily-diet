@@ -38,8 +38,6 @@ export function Home() {
       <NewMealButton/>
       
       
-      
-      
       <DayListDate/>
       <MealCard/>
       
